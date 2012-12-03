@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/UIVIewController Classes/Top View/ICTopView.m"
+         timestampString = "376207823.1371"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1088"
+         endingLineNumber = "1088"
+         landmarkName = "-recieveImageList:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/UIVIewController Classes/Top View/ICTopView.m"
+         timestampString = "376207823.1371"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1246"
+         endingLineNumber = "1246"
+         landmarkName = "-albumRetrieved:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/UIVIewController Classes/Top View/ICTopView.m"
+         timestampString = "376207823.1371"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1211"
+         endingLineNumber = "1211"
+         landmarkName = "-recieveAlbumList:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/UIVIewController Classes/Top View/ICTopView.m"
+         timestampString = "376207823.1371"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "720"
+         endingLineNumber = "720"
+         landmarkName = "-clearLabel"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/UIVIewController Classes/Video View/ICVideoViewController.m"
+         timestampString = "376209703.201477"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "778"
+         endingLineNumber = "778"
+         landmarkName = "-dragImage:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/UIVIewController Classes/Video View/ICVideoViewController.m"
+         timestampString = "376209703.201477"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "776"
+         endingLineNumber = "776"
+         landmarkName = "-dragImage:"
+         landmarkType = "5">
+      </FileBreakpoint>
+   </FileBreakpoints>
+</Bucket>

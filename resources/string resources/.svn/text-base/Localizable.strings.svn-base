@@ -1,0 +1,26 @@
+/* 
+ Localizable.strings
+ ImageCanvas1
+ 
+ Created by Aatish  Molasi on 09/04/12.
+ Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+ */
+
+/*  HomeView Controller */
+
+"Single Tap" = "**Single tap to select**";
+"Double Tap" = "**Double tap to select**";
+"Collages" = "Collages";
+"Videos" = "Videos";
+
+/* TopView Data */
+
+"Facebook" = "Facebook";
+"Albums" = "Albums";
+
+"Library" = "Library";
+"Albums " = "Albums ";
+
+"Text" = "Text";
+"Stickers" = "Stickers";
+"Background" = "Background";

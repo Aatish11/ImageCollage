@@ -1,0 +1,166 @@
+//
+//  ICTopView.h
+//  ImageCanvas1
+//
+//  Created by Nayan Chauhan on 21/02/12.
+//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "ICFontPickerViewController.h"
+#import "ICColorPickerViewController.h"
+#import "ICLibraryManager.h"
+#import "ICTextPickerViewController.h"
+#import "ICSocialManager.h"
+//#import "ICAlbums.h"
+//#import "ICCollageViewController.h"
+
+
+#define kMaxImageSize 300
+#define kImageSpace 40   //to manage distance between two images in scroll view
+
+
+@interface ICTopView : UIView<ICFontPickerDelegate,ICColorPickerDelegate,
+                            UIPopoverControllerDelegate,
+                            UIGestureRecognizerDelegate,
+                            UITextFieldDelegate,
+                            ICFacebookDelegate,UITableViewDelegate,UITableViewDataSource> 
+{
+	
+	
+	//Buttons to get images from different sources
+	UIButton *mLibraryButton;
+	UIButton *mFacebookButton;
+	UIButton *mTextButton;
+	UIButton *mStickersButton;
+	UIButton *mBackgroundButton;
+    UIButton *mTemplateButton;
+	UIButton *mCurrentSelection;
+	UIButton *mHighlightedButton;
+    //UIButton *mFontColorButton;
+	
+	// for text display
+	UIView *mTextDisplay;
+	UITextField *mFontButton;
+    UITextField *mFontSize;
+	UIView *mFontField;
+	UIView *mFontColor;
+	
+    //Final text to be dragged
+    UILabel *mFinalText;
+    
+	//UIView *mTextPreview;	
+	NSMutableArray *mContentArray;
+    NSMutableArray *mImageArray;
+    NSMutableArray *mLibraryAlbums;
+	
+	UIPopoverController *mFontPopoverController;
+	UIPopoverController *mColorPopoverController;
+    UIPopoverController *mTextPickerViewController;
+	
+	int mContentWidth;
+	int mContentHeight;
+	
+    NSMutableDictionary *mAlbumList;
+    
+    NSMutableArray *mAlbums;
+    BOOL mIsAlbum;
+	
+	UIActivityIndicatorView *spinner;
+    UIImageView *mFacebookLogger;
+    UIFont *mTextFont;
+    NSMutableArray *mStickerArray;
+	NSMutableArray* mTemplateArray;
+	UIView *mLogoutView;
+
+    BOOL mIsNotificationAdded;
+    
+    UITableView *mTableView;
+	UIButton *mFbLogin;
+	UIButton *mFbLogout;
+	UIButton *mBackToAlbums;
+	int mIndx;
+	int mInitial;
+    ICLibraryManager *mLibraryManager;
+}
+
+@property(retain,nonatomic) IBOutlet UIButton *libraryButton;
+@property(retain,nonatomic) IBOutlet UIButton *facebookButton;
+@property(retain,nonatomic) IBOutlet UIButton *textButton;
+@property(retain,nonatomic) IBOutlet UIButton *stickersButton;
+@property(retain,nonatomic) IBOutlet UIButton *backgroundButton;
+@property(retain,nonatomic) IBOutlet UIButton *templateButton;
+
+@property(retain,nonatomic) IBOutlet UILabel *finalText;
+@property(retain,nonatomic) IBOutlet UITextField *fontSize;
+
+@property(retain,nonatomic)  UIButton *currentSelection;
+@property(retain,nonatomic)  UIButton *highlightedButton;
+
+@property(retain,nonatomic) UITableView *tableView;
+@property(retain,nonatomic) IBOutlet UIView *textDisplay;
+@property(retain,nonatomic) IBOutlet UITextField *fontButton;
+@property(retain,nonatomic) IBOutlet UIView *fontField;
+@property(retain,nonatomic) IBOutlet UIView *fontColor;
+
+@property(nonatomic, retain)IBOutlet UIView *logoutView;
+@property(nonatomic, retain)IBOutlet UIButton *fbLogin;
+@property(nonatomic, retain)IBOutlet UIButton *fbLogout;
+@property(nonatomic, retain)IBOutlet UIButton *backToAlbums;
+
+@property(retain,nonatomic) NSMutableArray *contentArray;
+
+@property(retain,nonatomic) UIPopoverController *fontPopoverController;
+@property(retain,nonatomic) UIPopoverController *colorPopoverController;
+
+@property(retain,nonatomic) ICLibraryManager *libraryManager;
+@property(retain,nonatomic) NSMutableArray *stickerArray;
+@property(retain,nonatomic)NSMutableDictionary *albumList;
+@property(nonatomic)BOOL isAlbum;
+@property(nonatomic,retain)NSMutableArray *imageArray;
+@property(nonatomic,retain)NSMutableArray *libraryAlbums;
+
+@property(nonatomic,retain)NSMutableArray *albums;
+@property(nonatomic,retain)UIImageView *facebookLogger;
+@property(nonatomic,retain)UIFont *textFont;
+@property(nonatomic,retain)UIPopoverController *textPickerViewController;
+@property(nonatomic)BOOL isNotificationAdded;
+
+@property(nonatomic)int indx;
+@property(nonatomic)int initial;
+
+@property(nonatomic,retain) NSMutableArray* templateArray;
+
+-(void)clearTableView;
+-(IBAction)buttonAction:(id)sender;
+- (IBAction)logoutFacebook:(id)sender;
+-(IBAction)backToAlbum:(id)sender;
+-(IBAction)showFontPicker:(id)sender;
+-(void)showColorPicker:(id)sender;
+- (UIViewController*)viewController; 
+
+- (void)getImages:(id)sender;
+- (void)getImagesFromLibrary:(id)sender;
+- (void)loadImageFromUrl:(NSMutableDictionary *)data;
+
+- (IBAction)onTouchup:(UIButton *)sender;
+- (void)highlightButton:(UIButton *)b;
+
+- (void)changeBackground:(id)sender;
+- (void)textFieldDidChange:(id)sender;
+
+- (NSMutableArray *)getStickers;
+- (NSMutableArray *)getTemplates;
+- (NSMutableArray *)getBackgrounds;
+- (NSMutableArray *)getBackgroundFiles;
++ (UIImage *) imageWithView:(UIView *)view;
+
+- (void)releaseAllViews;
+- (void)releaseAllObjects;
+- (void)noInternetAlert;
+- (void)clearLabel;
+
+//-(UIImage *) imageFromBundleFile:(NSString*)inFileName;
+//- (CGImageRef)resizeCGImage:(CGImageRef)image toWidth:(int)width andHeight:(int)height;
+//- (CGImageRef) CreateScaledCGImageFromCGImage:(CGImageRef)image toWidth:(float)inWidth toHeight:(float)inHeight; //new
+@end

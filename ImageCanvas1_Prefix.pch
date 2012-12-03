@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'ImageCanvas1' target in the 'ImageCanvas1' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+#endif
