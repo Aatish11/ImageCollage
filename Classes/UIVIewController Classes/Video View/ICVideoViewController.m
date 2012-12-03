@@ -606,7 +606,6 @@
             
             [temp release];
         }
-        
         else 
         {
             for (UIView *view in self.temp.subviews)
